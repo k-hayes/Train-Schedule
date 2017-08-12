@@ -21,14 +21,14 @@ $("#add-train-btn").on("click", function(event) {
 
   // Grabs user input
   var trainName = $("#train-name-input").val().trim();
-  var trainRole = $("#destination-input").val().trim();
-  var trainStart = moment($("#firstTrain-Input").val().trim(), "HH:mm").subtract(10, "years").format("X");
+  var trainDestination = $("#destination-input").val().trim();
+  var trainStart = moment($("#firstTrain-input").val().trim(), "HH:mm").subtract(1, "year").format("X");
   var trainFrequency = $("#frequency-input").val().trim();
 
   // Creates local "temporary" object for holding train data
   var newTrain = {
     name: trainName,
-    role: trainDestination,
+    destination: trainDestination,
     start: trainStart,
     frequency: trainFrequency
   };
